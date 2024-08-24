@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>SimplesDev</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+        body {
+            font-family: "New Amsterdam", system-ui;
+            background-color: #D3D3D3;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            background-color: #525252;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #201d1d;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container input, .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background-color: #4e3fd6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background-color: #67597a;
+        }
+        .contacts {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            width: 80%;
+        }
+        .contact {
+            margin-bottom: 20px;
+        }
+        .contact h3 {
+            margin: 0;
+            color: #67597a;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        .contact a {
+            color: #ada7e7;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>SimplesDev</header>
+    <h1>contatos dos envovidos com Projetos</h1>
+    <div class="container">
+        <div class="form-container">
+            <form action="http://localhost:3000/send-email" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="contacts">
+            <div class="contact">
+                <h3>Contato 1</h3>
+                <p>Nome: Samuel Augusto</p>
+                <p>E-mail: 00001121148992SP@aluno.educacao.sp.gov.br</p>
+                <p>Projetos:</p>
+                <ul>
+                    <li><a href="https://samuel200n.github.io/200n/">Projeto 1</a></li>
+                    <li><a href="https://scratch.mit.edu/projects/1030889913/">Projeto 2</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Contato 2</h3>
+                <p>Nome: Maria Clara</p>
+                <p>E-mail: 00001101906777sp@al.educacao.sp.gov.br</p>
+                <p>Projetos:</p>
+                <ul>
+                    <li><a href="https://samuel200n.github.io/200n/">Projeto 3</a></li>
+                    <li><a href="https://scratch.mit.edu/projects/980497586/">Projeto 4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div><p>@Site feito por Samuel e Maria Clara</p></div>
+</body>
+</html>
